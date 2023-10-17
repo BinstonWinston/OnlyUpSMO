@@ -1,5 +1,4 @@
-[!WARNING]
-Some knowledge of Linux, Python, and Bazel is required to use this generator. If you just want to play this mod, try the fixed seed version here for the simplest installation.
+:warning: :warning: Some knowledge of Linux, Python, and Bazel is required to use this generator. If you just want to play this mod, try the fixed seed version here for the simplest installation.
 
 # SMO OnlyUp Stage Generator
 Components
@@ -18,8 +17,7 @@ Components
 ```
 bazel run //src:generate_stage -- -i /path/to/smo/romfs -o /path/to/output/dir -s YOUR_SEED_STRING
 ```
-[!IMPORTANT]
-All paths must be absolute. Bazel runs in a sandbox so paths relative to the current directory will not work correctly.
+:warning: All paths must be absolute. Bazel runs in a sandbox so paths relative to the current directory will not work correctly.
 
 * `-i`, `--input_romfs_path` A romfs dump of SMO obtained from your copy of SMO, used for reading object collisions
 * `-o`, `--output_romfs_path` Output directory to place generated stage and object files

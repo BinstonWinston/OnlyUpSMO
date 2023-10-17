@@ -1,0 +1,9 @@
+exefs/*
+romfs/*
+romfs-filtered/*
+romfs-filtered2/*
+romfs-final2/*
+texture*
+
+**/__pycache__/*
+bazel-**/*
