@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package rules_python;
+
+enum Difficulty {
+    EASY = 0;
+    MEDIUM = 1;
+    HARD = 2;
+}
+
+message JumpMetadata {
+    string desc = 1;
+    Difficulty difficulty = 2;
+}

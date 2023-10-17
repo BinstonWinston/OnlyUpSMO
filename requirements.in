@@ -1,0 +1,6 @@
+byml==2.4.4
+libyaz0==0.5
+pip==22.0.2
+PyYAML==6.0.1
+SarcLib==0.3
+cgal==5.6

@@ -1,0 +1,14 @@
+# Seaside
+sky: CloudSeaDayA
+objects:
+- CapWorldHomeCapShip001
+- CapWorldHomeCapShip001
+- CapWorldHomeStep000
+- CapWorldHomeTimer000FixParts000
+- SignBoardDanger
+- CapWorldHomeGate000
+- CapWorldTowerFloaterParts000
+captures:
+- KuriboWing
+capture_specific_objects:
+- WaterValleyExWater000

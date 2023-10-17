@@ -1,0 +1,33 @@
+# Metro
+sky: CloudRefreshA
+objects:
+- CityWorldBuildingInsideFallParts000
+- CityWorldBuildingInsideKeyMoveParts001
+- CityWorldChairA
+# - CityWorldChairB
+- CityWorldHomeFence002
+- CityWorldHomeFence003
+- CityWorldHomeFrame002
+- CityWorldHomeFrame008
+- CityWorldHomeFrame018
+- CityWorldHomeManhole000
+- CityWorldHomeSign004
+- CityWorldHomeSign017
+- CityWorldHomeSign020
+# - CityWorldHomeSignal000
+# - CityWorldHomeSignal005
+- CityWorldHomeStep002
+- CityWorldHomeStep003
+- CityWorldHomeStep020
+- CityWorldHomeStep035
+- CityWorldHomeStep040
+- CityWorldHomeSwingParts000
+- CityWorldHomeTimer003FixParts000
+- CityWorldHomeTimer004SeesawParts000
+- CityWorldHomeWall003
+- CarBreakable
+- CityWorldHomeFrame013
+captures:
+- Hosui
+capture_specific_objects:
+- WaterValleyExWater000

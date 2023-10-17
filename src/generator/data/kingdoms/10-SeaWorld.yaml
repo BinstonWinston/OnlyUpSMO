@@ -1,0 +1,16 @@
+# Seaside
+sky: CloudSeaDayA
+objects:
+- SeaWorldHomeCoralReef006
+- SeaWorldHomeCoralReef007
+- SeaWorldHomeCoralReef012
+- SeaWorldHomeGatePillar000
+- SeaWorldHomeGlassWaveSurfParts
+- SeaWorldHomePillar002
+- SeaWorldHomeSwitchKeyMoveParts000
+- SeaWorldHomeWaveSurfParts000
+- SeaWorldHomeBottle000
+captures:
+- Hosui
+capture_specific_objects:
+- WaterValleyExWater000

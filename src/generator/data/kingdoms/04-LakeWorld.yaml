@@ -1,0 +1,16 @@
+# Seaside
+sky: CloudSeaDayA
+objects:
+- LakeWorldHomeDebris000
+- LakeWorldHomeFloatingIsland000
+- LakeWorldHomeRiseParts001
+- LakeWorldHomeStonePillar002
+- LakeWorldHomeStonePillar002
+- LakeWorldHomeStonePillar007
+- LakeWorldHomeStonePillar007
+- LakeWorldHomeTimer001FixParts000
+- LakeWorldHomeTown002
+captures:
+- Hosui
+capture_specific_objects:
+- WaterValleyExWater000

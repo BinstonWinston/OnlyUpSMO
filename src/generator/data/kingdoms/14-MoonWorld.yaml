@@ -1,0 +1,16 @@
+# Metro
+sky: CloudRefreshA
+objects:
+- MoonWorldBasementKeyMoveParts002
+- MoonWorldCaptureParadeFence000
+- MoonWorldCaptureParadeMeganeStep000
+- MoonWorldTableB
+- MoonRock
+
+- MoonWorldHomeGround003
+- MoonWorldBreakParts
+- CageBreakable
+captures:
+- Hosui
+capture_specific_objects:
+- WaterValleyExWater000

@@ -1,0 +1,21 @@
+# Metro
+sky: CloudRefreshA
+objects:
+- LavaWorldFenceLiftExKeyMoveParts000
+- LavaWorldHomeClockParts000
+- LavaWorldHomeGroundParts002
+- LavaWorldHomeKeyMoveParts002
+- LavaWorldHomeRailMoveParts000
+- LavaWorldHomeRiseParts002
+- LavaWorldHomeRock000
+- LavaWorldHomeTimer001FixParts000
+- LavaWorldHomeTimer002WobbleParts000
+- LavaWorldHomeWheelParts000
+- LavaWorldWireStep000
+- LavaWorldHomeTimer000FixParts000
+- CarryMeat
+captures:
+# - unit_config_name: TestCaptureBubble
+#   parameter_config_name: Bubble
+capture_specific_objects:
+- WaterValleyExWater000

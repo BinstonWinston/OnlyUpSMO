@@ -1,0 +1,17 @@
+# Metro
+sky: CloudRefreshA
+objects:
+- SkyWorldHomeGate000
+- SkyWorldHomeLanternAStand
+- SkyWorldHomeRiseParts000
+- SkyWorldHomeStep000
+- SkyWorldHomeStep002
+- SkyWorldHomeStep010
+- SkyWorldHomeTimer000FixParts000
+- SkyWorldHomeTorch000
+- SkyWorldBreakParts000
+- SkyWorldHomeStatue001
+captures:
+- Hosui
+capture_specific_objects:
+- WaterValleyExWater000

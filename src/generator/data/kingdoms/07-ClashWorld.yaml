@@ -1,0 +1,13 @@
+# Seaside
+sky: CloudSeaDayA
+objects:
+- ClashWorldBreakParts000
+- ClashWorldHomeClockParts000
+- ClashWorldHomeHipDropTransformParts002
+- ClashWorldHomeTree000
+- ClashWorldHomeTree003
+- CageBreakable
+captures:
+- Hosui
+capture_specific_objects:
+- WaterValleyExWater000

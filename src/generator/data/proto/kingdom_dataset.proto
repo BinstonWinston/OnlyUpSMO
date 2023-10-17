@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package rules_python;
+
+message KingdomDataset {
+    repeated string objects = 1;
+    repeated string captures = 2;
+    repeated string capture_specific_objects = 3;
+    string sky = 4;
+}

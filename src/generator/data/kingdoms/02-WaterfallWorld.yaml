@@ -1,0 +1,15 @@
+# Seaside
+sky: CloudSeaDayA
+objects:
+- WaterfallWorldHomeBreakBone000
+- WaterfallWorldHomeFloaterIsland001
+- WaterfallWorldHomeRock000
+- WaterfallWorldHomeStep000
+- WaterfallWorldBreakParts006
+- WaterfallWorldHomeBreakFence000
+- WaterfallWorldHomeBone000
+- WaterfallWorldHomeBone001
+captures:
+- Hosui
+capture_specific_objects:
+- WaterValleyExWater000

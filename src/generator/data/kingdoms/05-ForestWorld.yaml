@@ -1,0 +1,16 @@
+# Seaside
+sky: CloudSeaDayA
+objects:
+- ForestWorldHomeBreakCover000
+- ForestWorldHomeFallParts000
+- ForestWorldHomeKeyMoveParts000
+- ForestWorldHomeRiseParts001
+- ForestWorldHomeRock000
+- ForestWorldHomeRotateParts000
+- ForestWorldHomeSenobiParts000
+- ForestWorldHomeTimer001FixParts000
+- ForestWorldHomeTree002
+captures:
+- Hosui
+capture_specific_objects:
+- WaterValleyExWater000

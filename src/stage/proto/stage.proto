@@ -1,0 +1,343 @@
+syntax = "proto3";
+
+package rules_python;
+
+import "src/stage/proto/math.proto";
+
+message Stage {
+  StageMap map = 1;
+//   StageDesign design = 2;
+//   StageSound sound = 3;
+}
+
+message StageMap {
+    repeated Scenario scenarios = 1;
+}
+
+message Scenario {
+    repeated Area area_list = 1;
+    repeated CheckPoint check_point_list = 2;
+    repeated StageDebug debug_list = 3;
+    repeated DemoObject demo_obj_list = 4;
+    repeated StageObject object_list = 5;
+    repeated Player player_list = 6;
+    repeated PlayerStartInfo player_start_info_list = 7;
+    repeated ScenarioStartCamera scenario_start_camera_list = 8;
+    repeated SceneWatchObj scene_watch_obj_list = 9;
+    repeated Sky sky_list = 10;
+    repeated StageObject zone_list = 11; // Type is StageObject as a simplification, it should have it's own Zone message type
+}
+
+message Area {
+    string id = 1;
+    bool is_end_no_interpole = 2;
+    bool is_link_dest = 3;
+    bool is_start_when_collide_ground = 4;
+    bool is_start_when_in_water = 5;
+    string layer_config_name = 6;
+    string model_name = 7;
+    string placement_file_name = 8;
+    int32 priority = 9;
+    string unit_config_name = 10;
+    string comment = 11;
+
+    Vec3 scale = 12;
+    Vec3 rotate = 13;
+    Vec3 translate = 14;
+
+    UnitConfig unit_config = 15;
+
+    LinkSet links = 16;
+
+
+    // For ChangeStageArea
+    string change_stage_id = 17;
+    string change_stage_name = 18;
+    bool is_only_exit = 19;
+    bool is_return_prev_stage = 20;
+    int32 possessed_actor_type_default_no_check = 21;
+    int32 scenario_no = 22;
+    int32 shine_got_on_off = 23;
+    string wipe_type = 24;
+
+    // For WaterArea
+    bool is_ice_water = 25;
+    bool is_ignore_area = 26;
+}
+
+message CheckPoint {
+
+}
+
+message StageDebug {
+
+}
+
+message DemoObject {
+
+}
+
+message Player {
+    string id = 1;
+    string change_stage_id = 2;
+    bool is_invalidate_cap = 3;
+    bool is_link_dest = 4;
+    bool is_long_shadow = 5;
+    bool is_moon = 6;
+    string layer_config_name = 7;
+    string model_name = 8;
+    string placement_file_name = 9;
+    string unit_config_name = 10;
+    string comment = 11;
+
+    Vec3 scale = 12;
+    Vec3 rotate = 13;
+    Vec3 translate = 14;
+
+    UnitConfig unit_config = 15;
+
+    LinkSet links = 16;
+}
+
+message PlayerStartInfo {
+    string id = 1;
+    string cube_map_unit_name = 2;
+    bool is_connect_to_collision = 3;
+    bool is_link_dest = 4;
+    string layer_config_name = 5;
+    string material_code = 6;
+    string model_name = 7;
+    string placement_file_name = 8;
+    string unit_config_name = 9;
+    string comment = 10;
+
+    Vec3 scale = 11;
+    Vec3 rotate = 12;
+    Vec3 translate = 13;
+
+    UnitConfig unit_config = 14;
+
+    LinkSet links = 15;
+}
+
+message ScenarioStartCamera {
+    string id = 1;
+    bool is_keep_pre_self_pose_next_camera = 2;
+    bool is_link_dest = 3;
+    string layer_config_name = 4;
+    string model_name = 5;
+    string placement_file_name = 6;
+    int32 play_step = 7;
+    string unit_config_name = 8;
+    string comment = 9;
+
+    Vec3 scale = 10;
+    Vec3 rotate = 11;
+    Vec3 translate = 12;
+
+    UnitConfig unit_config = 13;
+
+    LinkSet links = 14;
+}
+
+message SceneWatchObj {
+
+}
+
+message Sky {
+    string id = 1;
+    bool force_placement = 2;
+    bool is_link_dest = 3;
+    bool is_only_cube_map = 4;
+    string layer_config_name = 5;
+    string model_name = 6;
+    string placement_file_name = 7;
+    int32 texture_pattern_id = 8;
+    string unit_config_name = 9;
+    string comment = 10;
+
+    Vec3 scale = 11;
+    Vec3 rotate = 12;
+    Vec3 translate = 13;
+
+    UnitConfig unit_config = 14;
+
+    LinkSet links = 15;
+}
+
+message StageObject {
+    string id = 1;
+    string unit_config_name = 2;
+
+    LinkSet links = 3;
+
+    Vec3 scale = 4;
+    Vec3 rotate = 5;
+    Vec3 translate = 6;
+
+    UnitConfig unit_config = 7;
+
+    string cap_type = 8;
+    bool is_link_dest = 9;
+    bool is_valid_hack_start_entrance_camera = 10;
+    string layer_config_name = 12;
+    string model_name = 13;
+    int32 param_type = 14;
+    string placement_file_name = 15;
+    string comment = 16;
+
+    string event_wait_action_name = 19;
+
+    repeated Component components = 20;
+}
+
+message LinkSet {
+    repeated StageObject view_group = 1;
+    repeated StageObject look_at_rail = 2;
+    repeated StageObject next_key = 3;
+    repeated StageObject no_delete__shine = 4; // TODO need to support underscores in the names, 
+    // the actual link name when converted should be 'NoDelete_Shine'
+    repeated StageObject switch_alive_keep_on = 5;
+    repeated StageObject key_move_next = 6;
+    repeated StageObject move_next = 7;
+    repeated StageObject rail = 8; // Must have RailComponent
+    repeated StageObject cap_attack_on = 9; // Link to StageSwitch
+    repeated StageObject switch_start = 10; // Link to StageSwitch
+    repeated StageObject rise_parts = 11;
+    repeated StageObject switch_appear_target = 12;
+    repeated StageObject group_clipping = 13;
+    repeated StageObject camera_switch_on = 14;
+    repeated StageObject switch_appear = 15;
+
+    // ChangeStageArea
+    repeated StageObject player_restart_pos = 16;
+
+
+    repeated StageObject debug = 100;
+}
+
+message UnitConfig {
+    string display_name = 1;
+    string generate_category = 2;
+    string parameter_config_name = 3;
+    string placement_target_file = 4;
+
+    Vec3 display_scale = 5;
+    Vec3 display_rotate = 6;
+    Vec3 display_translate = 7;
+}
+
+
+///////////////
+// Components
+///////////////
+
+message Component {
+    oneof component {
+        StageChangeComponent stage_change = 1;
+        KeyMoveNextComponent key_move_next = 2;
+        MoveNextComponent move_next = 3;
+        RailComponent rail = 4;
+        RailPointComponent rail_point = 5;
+        NextKeyComponent next_key = 6;
+        CaptureComponent capture = 7;
+        CapSwitchComponent cap_switch = 8;
+        RiseMapPartsHolderComponent rise_map_parts_holder = 9;
+        RisePartsComponent rise_parts = 10;
+        CapRackTimerComponent cap_rack_timer = 11;
+    }
+}
+
+message StageChangeComponent {
+    string change_stage_id = 1;
+    string change_stage_name = 2;
+
+    int32 hint_priority = 3;
+    bool is_connect_to_collision = 4;
+    bool is_exit_only = 5;
+    bool is_moon = 6;
+    bool is_no_shadow = 7;
+    bool is_return_prev_stage = 8;
+    bool is_valid_entrance_camera = 9;
+}
+
+message KeyMoveNextComponent {
+    int32 delay_time = 1;
+    int32 interpolate_type = 2;
+    bool is_floor_touch_start = 3;
+    bool is_hip_drop_start = 4;
+    bool is_play_sign = 5;
+    bool is_stop_kill = 6;
+    int32 move_type = 7;
+    float speed = 8;
+    int32 speed_by_time = 9;
+    int32 wait_time = 10;
+
+}
+
+message MoveNextComponent {
+    int32 delay_frame_num = 1;
+    bool is_wave_check_on = 2;
+    int32 rail_move_frame = 3;
+    float rail_move_speed = 4;
+    bool stage_start_hack = 5;
+    int32 wait_frame_num = 6;
+}
+
+message RailComponent {
+    repeated StageObject rail_points = 1; // With RailPoint component
+    string rail_type = 2;
+    bool is_closed = 3;
+    bool is_ladder = 4;
+}
+
+message RailPointComponent {
+    repeated Vec3 control_points = 1;
+}
+
+message NextKeyComponent {
+    int32 play_step = 1;
+    bool is_keep_pre_self_pose_next_camera = 2;
+}
+
+message CaptureComponent {
+    string cap_name = 1;
+    bool is_force_revive_on_dead = 2;
+    bool is_revive = 3;
+    int32 move_type = 4;
+    float shadow_length = 5;
+}
+
+message CapSwitchComponent {
+    bool is_connect_to_collision = 1;
+    bool is_no_reaction = 2;
+    bool is_valid_object_camera = 3;
+    bool shadow_flag = 4;
+}
+
+message RiseMapPartsHolderComponent {
+    int32 delay_frame = 1;
+    bool is_valid_object_camera = 2; 
+    int32 related_boss = 3;
+    bool reset_first_pos_in_mini_game = 4; 
+    int32 scenario_no = 5;
+}
+
+message RisePartsComponent {
+    bool is_play_success_se = 1;
+    int32 move_interpole_type = 2;
+    int32 pad_rumble_type = 3;
+    float speed = 4;
+    int32 speed_by_time = 5;
+    int32 wait_time = 6;
+}
+
+message CapRackTimerComponent {
+    int32 camera_end_interp_frame = 1;
+    int32 camera_start_interp_frame = 2;
+    int32 cap_return_message = 3;
+    bool is_connect_to_collision = 4;
+    bool is_no_reaction = 5;
+    bool is_valid_object_camera = 6;
+    int32 valid_frame = 7;
+}

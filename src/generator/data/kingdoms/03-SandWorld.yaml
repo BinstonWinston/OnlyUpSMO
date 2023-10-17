@@ -1,0 +1,22 @@
+# Seaside
+sky: CloudSeaDayA
+objects:
+- SandWorldHomeFloatingStep000
+- SandWorldHomeHipDropRepairParts000
+- SandWorldHomeLeaf000
+- SandWorldHomeLift000
+- SandWorldHomeMeltIce000
+- SandWorldHomeQuickSand000
+- SandWorldHomeRiseParts000
+- SandWorldHomeRiseParts001
+- SandWorldHomeStonePillar002
+- SandWorldHomeTimer002FixParts000
+- SandWorldHomeTown001
+- SandWorldHomeTreePalm000
+- SandWorldHomeSphinxCave
+- SandWorldBreakParts000
+- SandWorldCandlestand000
+captures:
+- Hosui
+capture_specific_objects:
+- WaterValleyExWater000
