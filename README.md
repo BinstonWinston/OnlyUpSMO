@@ -1,4 +1,4 @@
-:warning: :warning: Some knowledge of Linux, Python, and Bazel is required to use this generator. If you just want to play this mod, try the fixed seed version here for the simplest installation.
+:warning: :warning: Some knowledge of Linux, Python, and Bazel is required to use this generator. **If you just want to play this mod, try the fixed seed version [here](https://gamebanana.com/mods/474306) for the simplest installation.**
 
 # SMO OnlyUp Stage Generator
 Components
